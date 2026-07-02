@@ -177,3 +177,33 @@ background:deeppink;
 color:white;
 transform:scale(1.05);
 }
+
+.social{
+    text-align:center;
+    margin:30px 0;
+}
+
+.social a{
+    display:inline-block;
+    margin:10px;
+    padding:12px 25px;
+    color:white;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:bold;
+    border-radius:30px;
+    transition:0.3s;
+}
+
+.instagram{
+    background:#E1306C;
+}
+
+.tiktok{
+    background:#000;
+}
+
+.social a:hover{
+    transform:scale(1.08);
+    opacity:0.9;
+}
