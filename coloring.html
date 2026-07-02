@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hair Coloring | Salon Soukaina</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body{
+            margin:0;
+            background:#fff0f5;
+            font-family:Arial,sans-serif;
+        }
+
+        h1{
+            background:deeppink;
+            color:white;
+            text-align:center;
+            padding:20px;
+            margin:0;
+        }
+
+        .gallery{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:20px;
+            padding:30px;
+        }
+
+        .gallery img{
+            width:100%;
+            height:300px;
+            object-fit:cover;
+            border-radius:15px;
+            box-shadow:0 5px 15px rgba(0,0,0,.3);
+            transition:0.4s;
+        }
+
+        .gallery img:hover{
+            transform:scale(1.05);
+        }
+
+        .back{
+            display:block;
+            width:200px;
+            margin:20px auto 40px;
+            text-align:center;
+            background:deeppink;
+            color:white;
+            text-decoration:none;
+            padding:15px;
+            border-radius:10px;
+            font-size:18px;
+        }
+
+        .back:hover{
+            background:purple;
+        }
+    </style>
+
+</head>
+<body>
+
+<h1>Hair Coloring Gallery</h1>
+
+<div class="gallery">
+
+    <img src="images/coloring1.jpg" alt="Hair Coloring 1">
+    <img src="images/coloring2.jpg" alt="Hair Coloring 2">
+    <img src="images/coloring3.jpg" alt="Hair Coloring 3">
+    <img src="images/coloring4.jpg" alt="Hair Coloring 4">
+    <img src="images/coloring5.jpg" alt="Hair Coloring 5">
+    <img src="images/coloring6.jpg" alt="Hair Coloring 6">
+    <img src="images/coloring7.jpg" alt="Hair Coloring 7">
+    <img src="images/coloring8.jpg" alt="Hair Coloring 8">
+    <img src="images/coloring9.jpg" alt="Hair Coloring 9">
+    <img src="images/coloring10.jpg" alt="Hair Coloring 10">
+
+</div>
+
+<a href="index.html" class="back">⬅ Back to Home</a>
+
+</body>
+</html>
