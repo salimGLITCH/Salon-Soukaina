@@ -1,87 +1,322 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salon Soukaina</title>
 
-    <link rel="stylesheet" href="style.css">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Salon Soukaina</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 </head>
 
 <body>
 
+<div class="background-animation">
+
+<div class="circle c1"></div>
+
+<div class="circle c2"></div>
+
+<div class="circle c3"></div>
+
+<div class="circle c4"></div>
+
+</div>
+
 <header>
 
-    <h1>Salon Soukaina</h1>
+<nav class="navbar">
 
-    <p>Beauty • Hair • Nails</p>
+<div class="logo">
 
-    <a href="loading-contact.html"
-     class="contact-btn">
-        📞 Contact Us
-    </a>
+🌸 Salon Soukaina
 
-</header>
+</div>
+
+<ul class="menu">
+
+<li><a href="#beauty">Beauté</a></li>
+
+<li><a href="#hair">Hair</a></li>
+
+<li><a href="#nails">Nails</a></li>
+
+<li><a href="contact.html">Contact Us</a></li>
+
+</ul>
+
+<div class="menu-btn">
+
+<i class="fa-solid fa-bars"></i>
+
+</div>
+
+</nav>
 
 <section class="hero">
 
-    <h2>Welcome to Salon Soukaina</h2>
+<div class="hero-content">
 
-    <p>Your beauty is our passion.</p>
+<h1>
+
+Welcome to
+
+<span>Salon Soukaina</span>
+
+</h1>
+
+<p>
+
+Luxury Beauty • Hair • Nails
+
+</p>
+
+<a href="#services" class="hero-button">
+
+Explore Services
+
+</a>
+
+</div>
+
+<div class="hero-image">
+
+<img src="images/hero.jpg" alt="Salon Soukaina">
+
+</div>
+
+</section>
+
+</header>
+
+<main id="services">
+
+<!-- BEAUTÉ -->
+
+<section id="beauty" class="category">
+
+<h2 class="section-title">
+
+Beauté
+
+</h2>
+
+<div class="cards">
+
+<a href="hair-cut.html" class="card">
+
+<img src="images/hair-cut.jpg" alt="Hair Cut">
+
+<div class="card-content">
+
+<h3>Hair Cut</h3>
+
+<p>Modern cuts for women & men.</p>
+
+</div>
+
+</a>
+
+<a href="hair-coloring.html" class="card">
+
+<img src="images/hair-coloring.jpg" alt="Hair Coloring">
+
+<div class="card-content">
+
+<h3>Hair Coloring</h3>
+
+<p>Luxury coloring & highlights.</p>
+
+</div>
+
+</a>
+
+<a href="hair-style.html" class="card">
+
+<img src="images/hair-style.jpg" alt="Hair Style">
+
+<div class="card-content">
+
+<h3>Hair Style</h3>
+
+<p>Elegant hairstyles for every event.</p>
+
+</div>
+
+</a>
+
+</div>
 
 </section>
 
-<section class="services">
+<!-- HAIR -->
 
-    <a href="haircut.html" class="card">
-        <div class="icon">✂️</div>
-        <h3>Hair Cut</h3>
-        <p>Modern Hair Cuts</p>
-    </a>
+<section id="hair" class="category">
 
-    <a href="coloring.html" class="card">
-        <div class="icon">🎨</div>
-        <h3>Hair Coloring</h3>
-        <p>Professional Hair Coloring</p>
-    </a>
+<h2 class="section-title">
 
-    <a href="hairstyle.html" class="card">
-        <div class="icon">💇</div>
-        <h3>Hair Style</h3>
-        <p>Beautiful Hairstyles</p>
-    </a>
+Hair
 
-    <a href="manicure.html" class="card">
-        <div class="icon">💅</div>
-        <h3>Manicure</h3>
-        <p>Professional Manicure</p>
-    </a>
+</h2>
 
-    <a href="nails.html" class="card">
-        <div class="icon">💎</div>
-        <h3>Nails Style</h3>
-        <p>Luxury Nail Designs</p>
-    </a>
+<div class="cards">
 
-    <a href="nailscoloring.html" class="card">
-        <div class="icon">🌸</div>
-        <h3>Nails Coloring</h3>
-        <p>Modern Nail Colors</p>
-    </a>
+<a href="manicure.html" class="card">
+
+<img src="images/manicure.jpg" alt="Manicure">
+
+<div class="card-content">
+
+<h3>Manicure</h3>
+
+<p>Professional manicure service.</p>
+
+</div>
+
+</a>
+
+<a href="nails-style.html" class="card">
+
+<img src="images/nails-style.jpg" alt="Nails Style">
+
+<div class="card-content">
+
+<h3>Nails Style</h3>
+
+<p>Creative nail designs.</p>
+
+</div>
+
+</a>
+
+<a href="nails-coloring.html" class="card">
+
+<img src="images/nails-coloring.jpg" alt="Nails Coloring">
+
+<div class="card-content">
+
+<h3>Nails Coloring</h3>
+
+<p>Premium nail coloring.</p>
+
+</div>
+
+</a>
+
+</div>
 
 </section>
+
+<!-- FOLLOW US -->
+
+<section class="follow-section">
+
+<h2 class="section-title">
+
+
+<!-- FOLLOW US -->
+
+<section class="follow-section">
+
+<h2 class="section-title">
+
+Follow Us
+
+</h2>
+
+<p class="follow-text">
+
+Follow Salon Soukaina on social media to discover our latest hairstyles, nail designs and beauty services.
+
+</p>
+
+<div class="social-container">
+
+<a href="https://instagram.com/salonsoukaina1"
+
+target="_blank"
+
+class="social-card instagram">
+
+<i class="fab fa-instagram"></i>
+
+<span>Instagram</span>
+
+</a>
+
+<a href="https://tiktok.com/@1salonsoukaina"
+
+target="_blank"
+
+class="social-card tiktok">
+
+<i class="fab fa-tiktok"></i>
+
+<span>TikTok</span>
+
+</a>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section class="contact-home">
+
+<div class="contact-box">
+
+<h2>
+
+Contact Us
+
+</h2>
+
+<p>
+
+We are happy to welcome you to Salon Soukaina.
+
+Book your appointment today and enjoy a luxury beauty experience.
+
+</p>
+
+<a href="contact.html" class="contact-button">
+
+Contact Now
+
+</a>
+
+</div>
+
+</section>
+
+</main>
 
 <footer>
 
-    <p>© 2026 Salon Soukaina. All Rights Reserved.</p>
+<p>
+
+© 2026 Salon Soukaina — All Rights Reserved
+
+</p>
 
 </footer>
 
-<script>
-setTimeout(function(){
-    window.location.href="contact.html";
-},1800);
-</script>
+<script src="script.js"></script>
 
 </body>
+
 </html>
