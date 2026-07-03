@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Loading...</title>
+<title>Loading</title>
 
 <style>
 
@@ -13,51 +13,106 @@ padding:0;
 box-sizing:border-box;
 }
 
-body{
+html,body{
+width:100%;
+height:100%;
 overflow:hidden;
-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-background:linear-gradient(135deg,#ffd9ea,#fff8fb);
-font-family:Arial,sans-serif;
 }
 
-h1{
+body{
+background:#fff7fa;
+position:relative;
+}
+
+/* الرياح */
+
+.wind{
+
 position:absolute;
-color:#e91e63;
-font-size:45px;
-z-index:100;
-animation:pulse 2s infinite;
+
+top:0;
+
+left:-120%;
+
+width:120%;
+
+height:100%;
+
+background:linear-gradient(
+90deg,
+transparent 0%,
+rgba(255,182,213,.25) 20%,
+rgba(255,105,180,.45) 40%,
+rgba(255,182,213,.25) 70%,
+transparent 100%
+);
+
+animation:windMove 2.8s ease-in-out forwards;
+
+z-index:5;
+
 }
 
-@keyframes pulse{
-0%,100%{opacity:1;transform:scale(1);}
-50%{opacity:.6;transform:scale(1.08);}
-}
-
-.petal{
-position:absolute;
-top:-100px;
-font-size:35px;
-animation:wind linear infinite;
-opacity:.9;
-}
-
-@keyframes wind{
+@keyframes windMove{
 
 0%{
-transform:translate(-100px,-100px) rotate(0deg);
-opacity:0;
-}
 
-20%{
-opacity:1;
+left:-120%;
+
 }
 
 100%{
-transform:translate(250px,120vh) rotate(1080deg);
+
+left:120%;
+
+}
+
+}
+
+/* الورود */
+
+.flower{
+
+position:absolute;
+
+font-size:34px;
+
 opacity:0;
+
+animation:flowerMove 2.8s linear forwards;
+
+z-index:10;
+
+}
+
+@keyframes flowerMove{
+
+0%{
+
+transform:translateX(-150px) rotate(0deg);
+
+opacity:0;
+
+}
+
+20%{
+
+opacity:1;
+
+}
+
+80%{
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateX(calc(100vw + 200px)) rotate(720deg);
+
+opacity:0;
+
 }
 
 }
@@ -68,35 +123,33 @@ opacity:0;
 
 <body>
 
-<h1>🌸 Welcome 🌸</h1>
+<div class="wind"></div>
+
+<div class="flower" style="top:5%;animation-delay:.0s;">🌸</div>
+<div class="flower" style="top:12%;animation-delay:.1s;">🌸</div>
+<div class="flower" style="top:20%;animation-delay:.2s;">🌸</div>
+<div class="flower" style="top:28%;animation-delay:.3s;">🌸</div>
+<div class="flower" style="top:36%;animation-delay:.4s;">🌸</div>
+<div class="flower" style="top:44%;animation-delay:.5s;">🌸</div>
+<div class="flower" style="top:52%;animation-delay:.6s;">🌸</div>
+<div class="flower" style="top:60%;animation-delay:.7s;">🌸</div>
+<div class="flower" style="top:68%;animation-delay:.8s;">🌸</div>
+<div class="flower" style="top:76%;animation-delay:.9s;">🌸</div>
+<div class="flower" style="top:84%;animation-delay:1s;">🌸</div>
 
 <script>
 
-for(let i=0;i<40;i++){
+document.querySelectorAll(".flower").forEach(f=>{
 
-let p=document.createElement("div");
+f.style.left="-120px";
 
-p.className="petal";
-
-p.innerHTML="🌸";
-
-p.style.left=Math.random()*100+"%";
-
-p.style.animationDuration=(3+Math.random()*4)+"s";
-
-p.style.animationDelay=Math.random()*3+"s";
-
-p.style.fontSize=(20+Math.random()*25)+"px";
-
-document.body.appendChild(p);
-
-}
+});
 
 setTimeout(function(){
 
-window.location.href="contact.html";
+    window.location.href="contact.html";
 
-},3000);
+},2800);
 
 </script>
 
