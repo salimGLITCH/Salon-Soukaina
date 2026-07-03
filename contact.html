@@ -1,124 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us | Salon Soukaina</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Salon Soukaina</title>
 
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
 
-<style>
+    <style>
 
-body{
-    font-family:Arial, sans-serif;
-    background:#fff5f8;
-    margin:0;
-}
+    .contact-info{
+        width:90%;
+        max-width:800px;
+        margin:40px auto;
+        text-align:center;
+    }
 
-header{
-    background:#e91e63;
-    color:white;
-    text-align:center;
-    padding:30px;
-}
+    .contact-info h2{
+        color:#e91e63;
+        margin-bottom:20px;
+        font-size:36px;
+    }
 
-.contact-box{
-    width:90%;
-    max-width:700px;
-    margin:40px auto;
-    background:white;
-    padding:30px;
-    border-radius:20px;
-    box-shadow:0 0 15px rgba(0,0,0,.2);
-    text-align:center;
-}
+    .contact-info p{
+        font-size:20px;
+        margin:15px 0;
+    }
 
-.contact-box h2{
-    color:#e91e63;
-}
+    .follow-section{
+        width:100%;
+        background:#ffe4ef;
+        padding:40px 20px;
+        text-align:center;
+        margin-top:40px;
+    }
 
-.contact-box p{
-    font-size:18px;
-    margin:15px 0;
-}
+    .follow-section h2{
+        color:#e91e63;
+        font-size:36px;
+        margin-bottom:30px;
+    }
 
-.social{
-    display:block;
-    width:250px;
-    margin:15px auto;
-    padding:15px;
-    color:white;
-    text-decoration:none;
-    border-radius:10px;
-    font-size:18px;
-    transition:.3s;
-}
+    .social-btn{
+        display:block;
+        width:300px;
+        max-width:90%;
+        margin:15px auto;
+        padding:18px;
+        text-decoration:none;
+        color:white;
+        font-size:22px;
+        font-weight:bold;
+        transition:.3s;
+    }
 
-.instagram{
-    background:#E1306C;
-}
+    .instagram{
+        background:#E1306C;
+    }
 
-.tiktok{
-    background:#000;
-}
+    .tiktok{
+        background:#000;
+    }
 
-.social:hover{
-    transform:scale(1.05);
-}
+    .social-btn:hover{
+        transform:scale(1.05);
+    }
 
-.back{
-    display:inline-block;
-    margin-top:30px;
-    padding:15px 30px;
-    background:#e91e63;
-    color:white;
-    text-decoration:none;
-    border-radius:10px;
-}
+    .back-home{
+        text-align:center;
+        margin:40px 0;
+    }
 
-.back:hover{
-    background:#c2185b;
-}
+    .back-home a{
+        display:inline-block;
+        padding:15px 30px;
+        background:#e91e63;
+        color:white;
+        text-decoration:none;
+        font-weight:bold;
+    }
 
-i{
-    margin-right:10px;
-}
+    @media(max-width:768px){
 
-</style>
+        .contact-info h2{
+            font-size:28px;
+        }
+
+        .contact-info p{
+            font-size:17px;
+        }
+
+        .follow-section h2{
+            font-size:28px;
+        }
+
+        .social-btn{
+            font-size:18px;
+            width:90%;
+        }
+
+    }
+
+    </style>
 
 </head>
 
 <body>
 
 <header>
-<h1>Salon Soukaina</h1>
-<p>Contact Us</p>
+
+    <h1>Salon Soukaina</h1>
+
+    <p>Contact Us</p>
+
 </header>
 
-<div class="contact-box">
+<section class="contact-info">
 
-<h2>Contact Information</h2>
+    <h2>Contact Information</h2>
 
-<p>📍 Morocco</p>
+    <p>📍 Morocco</p>
 
-<p>📞 +212 XX XX XX XX XX</p>
+    <p>📞 +212 XX XX XX XX XX</p>
 
-<p>📧 salonsoukaina@gmail.com</p>
+    <p>📧 salonsoukaina@gmail.com</p>
 
-<h2>Follow Us</h2>
+</section>
 
-<a class="social instagram" href="https://instagram.com/salonsoukaina1" target="_blank">
-<i class="fab fa-instagram"></i> Instagram
-</a>
+<section class="follow-section">
 
-<a class="social tiktok" href="https://tiktok.com/@1salonsoukaina" target="_blank">
-<i class="fab fa-tiktok"></i> TikTok
-</a>
+    <h2>Follow Us</h2>
 
-<a href="index.html" class="back">
-⬅ Back to Home
-</a>
+    <a href="https://instagram.com/salonsoukaina1"
+       class="social-btn instagram"
+       target="_blank">
+       📷 Instagram
+    </a>
+
+    <a href="https://tiktok.com/@1salonsoukaina"
+       class="social-btn tiktok"
+       target="_blank">
+       🎵 TikTok
+    </a>
+
+</section>
+
+<div class="back-home">
+
+    <a href="index.html">
+        ⬅ Back to Home
+    </a>
 
 </div>
 

@@ -1,111 +1,298 @@
-body{
+/* =========================
+   RESET
+========================= */
+
+*{
     margin:0;
-    font-family:Arial,sans-serif;
-    background:#f8f8f8;
+    padding:0;
+    box-sizing:border-box;
 }
+
+html,body{
+    width:100%;
+    overflow-x:hidden;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#fff5f8;
+    color:#333;
+}
+
+/* =========================
+   HEADER
+========================= */
 
 header{
+    width:100%;
     background:#e91e63;
     color:white;
-    text-align:center;
-    padding:30px;
-}
-
-header h1{
-    margin:0;
-    font-size:42px;
-}
-
-header p{
-    margin:10px 0;
-    font-size:20px;
-}
-
-.contact-btn{
-    display:inline-block;
-    margin-top:15px;
-    background:white;
-    color:#e91e63;
-    text-decoration:none;
-    padding:12px 25px;
-    border-radius:25px;
-    font-weight:bold;
-}
-
-.welcome{
     text-align:center;
     padding:40px 20px;
 }
 
-.welcome h2{
-    color:#e91e63;
-}
-
-.services{
-    width:90%;
-    margin:30px auto;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
-
-.card{
-    background:white;
-    border-radius:15px;
-    padding:30px;
-    text-align:center;
-    text-decoration:none;
-    color:#333;
-    box-shadow:0 5px 12px rgba(0,0,0,.1);
-    transition:.3s;
-}
-
-.card:hover{
-    transform:translateY(-5px);
-}
-
-.icon{
-    font-size:50px;
-    margin-bottom:15px;
-}
-
-.card h3{
-    color:#e91e63;
-    margin:10px 0;
-}
-
-.card p{
-    color:#666;
-}
-
-footer{
-    background:#222;
-    color:white;
-    text-align:center;
-    padding:15px;
-    margin-top:30px;
-}
-
-@media(max-width:768px){
-
 header h1{
-    font-size:30px;
+    font-size:48px;
+    margin-bottom:10px;
 }
 
 header p{
-    font-size:16px;
+    font-size:20px;
 }
+
+/* =========================
+   CONTACT BUTTON
+========================= */
 
 .contact-btn{
-    width:80%;
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 30px;
+    background:white;
+    color:#e91e63;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
 }
 
+.contact-btn:hover{
+    background:#ffe5ef;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    text-align:center;
+    padding:50px 20px;
+}
+
+.hero h2{
+    color:#e91e63;
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    color:#666;
+    font-size:20px;
+}
+
+/* =========================
+   SERVICES
+========================= */
+
 .services{
-    grid-template-columns:1fr;
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:40px auto;
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:25px;
+
+}
+
+/* =========================
+   CARD
+========================= */
+
+.card{
+
+    width:260px;
+
+    background:white;
+
+    text-align:center;
+
+    text-decoration:none;
+
+    color:#333;
+
+    padding:35px 20px;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.12);
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.icon{
+
+    font-size:55px;
+
+    margin-bottom:15px;
+
+}
+
+.card h3{
+
+    color:#e91e63;
+
+    margin-bottom:10px;
+
+    font-size:28px;
+
+}
+
+.card p{
+
+    color:#777;
+
+    font-size:17px;
+
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+
+    margin-top:40px;
+
+    background:#111;
+
+    color:white;
+
+    text-align:center;
+
+    padding:20px;
+
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:900px){
+
+header h1{
+
+font-size:36px;
+
+}
+
+.hero h2{
+
+font-size:30px;
+
 }
 
 .card{
-    padding:25px;
+
+width:220px;
+
+}
+
+}
+
+/* =========================
+   PHONE
+========================= */
+
+@media(max-width:768px){
+
+header{
+
+padding:30px 15px;
+
+}
+
+header h1{
+
+font-size:30px;
+
+}
+
+header p{
+
+font-size:17px;
+
+}
+
+.contact-btn{
+
+width:90%;
+
+max-width:260px;
+
+}
+
+.hero{
+
+padding:35px 15px;
+
+}
+
+.hero h2{
+
+font-size:28px;
+
+}
+
+.hero p{
+
+font-size:16px;
+
+}
+
+.services{
+
+display:grid;
+
+grid-template-columns:1fr;
+
+gap:18px;
+
+width:92%;
+
+}
+
+.card{
+
+width:100%;
+
+padding:28px 18px;
+
+}
+
+.icon{
+
+font-size:45px;
+
+}
+
+.card h3{
+
+font-size:24px;
+
+}
+
+.card p{
+
+font-size:15px;
+
+}
+
+footer{
+
+font-size:14px;
+
 }
 
 }
