@@ -1,128 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
 <title>Loading...</title>
 
 <style>
 
 *{
+
 margin:0;
+
 padding:0;
+
 box-sizing:border-box;
+
 }
 
 html,body{
+
 width:100%;
+
 height:100%;
+
 overflow:hidden;
+
 background:#fff8fc;
+
 }
 
 body{
+
 position:relative;
+
 }
 
-/* الدخان الوردي */
+/* الخلفية */
 
-.smoke{
+.background{
 
 position:absolute;
 
-top:0;
-left:-150%;
+inset:0;
 
-width:180%;
-height:100%;
+background:linear-gradient(
 
-background:
-radial-gradient(circle at 10% 20%,rgba(255,170,210,.45),transparent 20%),
-radial-gradient(circle at 30% 60%,rgba(255,120,190,.40),transparent 22%),
-radial-gradient(circle at 60% 35%,rgba(255,180,220,.38),transparent 18%),
-radial-gradient(circle at 80% 70%,rgba(255,140,200,.35),transparent 20%),
-linear-gradient(90deg,
-rgba(255,230,242,0),
-rgba(255,170,210,.55),
-rgba(255,120,190,.65),
-rgba(255,170,210,.55),
-rgba(255,230,242,0)
+135deg,
+
+#fff8fc,
+
+#ffe5f1,
+
+#ffd5ea,
+
+#fff8fc
+
 );
-
-filter:blur(35px);
-
-animation:wind 3.5s ease-in-out forwards;
-
-z-index:5;
 
 }
 
-@keyframes wind{
+/* طبقة الرياح */
+
+.wind{
+
+position:absolute;
+
+top:-10%;
+
+left:-180%;
+
+width:220%;
+
+height:120%;
+
+filter:blur(45px);
+
+opacity:.95;
+
+background:
+
+radial-gradient(circle at 10% 20%,rgba(255,170,210,.35),transparent 18%),
+
+radial-gradient(circle at 25% 70%,rgba(255,120,190,.45),transparent 20%),
+
+radial-gradient(circle at 45% 35%,rgba(255,180,220,.35),transparent 22%),
+
+radial-gradient(circle at 65% 75%,rgba(255,150,205,.45),transparent 20%),
+
+radial-gradient(circle at 85% 30%,rgba(255,200,225,.35),transparent 18%),
+
+linear-gradient(
+
+90deg,
+
+rgba(255,255,255,0),
+
+rgba(255,190,220,.55),
+
+rgba(255,120,180,.70),
+
+rgba(255,190,220,.55),
+
+rgba(255,255,255,0)
+
+);
+
+animation:windMove 4s ease-in-out forwards;
+
+z-index:2;
+
+}
+
+@keyframes windMove{
 
 0%{
 
-left:-150%;
-transform:scaleX(.8);
+left:-180%;
+
+transform:scaleX(.75);
 
 }
 
 50%{
 
-transform:scaleX(1.05);
+transform:scaleX(1.1);
 
 }
 
 100%{
 
 left:120%;
+
 transform:scaleX(.9);
 
 }
 
 }
 
-/* الورود */
+/* طبقة الضباب الثانية */
 
-.flower{
+.wind2{
 
 position:absolute;
 
-font-size:24px;
+top:-15%;
 
-opacity:0;
+left:-200%;
 
-animation:flowers 3.5s linear forwards;
+width:240%;
 
-z-index:10;
+height:130%;
+
+filter:blur(70px);
+
+opacity:.55;
+
+background:
+
+radial-gradient(circle at 15% 50%,rgba(255,255,255,.55),transparent 18%),
+
+radial-gradient(circle at 35% 25%,rgba(255,190,220,.50),transparent 22%),
+
+radial-gradient(circle at 55% 70%,rgba(255,150,200,.45),transparent 18%),
+
+radial-gradient(circle at 75% 40%,rgba(255,210,230,.45),transparent 20%),
+
+linear-gradient(
+
+90deg,
+
+transparent,
+
+rgba(255,210,235,.45),
+
+rgba(255,255,255,.30),
+
+rgba(255,180,215,.45),
+
+transparent
+
+);
+
+animation:windMove2 4.2s ease-in-out forwards;
+
+z-index:3;
 
 }
 
-@keyframes flowers{
+@keyframes windMove2{
 
 0%{
 
-transform:translateX(-250px) rotate(0deg);
-
-opacity:0;
-
-}
-
-15%{
-
-opacity:1;
-
-}
-
-85%{
-
-opacity:1;
+left:-200%;
 
 }
 
 100%{
 
-transform:translateX(calc(100vw + 250px))
-translateY(-40px)
+left:130%;
+
+}
+
+}
+
+/* البتلات */
+
+.petal{
+
+position:absolute;
+
+left:-180px;
+
+font-size:22px;
+
+opacity:0;
+
+z-index:10;
+
+animation:petalMove 4s linear forwards;
+
+}
+
+@keyframes petalMove{
+
+0%{
+
+transform:translateX(-200px) translateY(0) rotate(0deg);
+
+opacity:0;
+
+}
+
+10%{
+
+opacity:1;
+
+}
+
+50%{
+
+transform:translateX(55vw) translateY(-20px) rotate(360deg);
+
+}
+
+100%{
+
+transform:translateX(calc(100vw + 300px))
+
+translateY(35px)
+
 rotate(1080deg);
 
 opacity:0;
@@ -137,42 +267,93 @@ opacity:0;
 
 <body>
 
-<div class="smoke"></div>
+<div class="background"></div>
 
-<div class="flower" style="top:2%;animation-delay:.0s;">🌸</div>
-<div class="flower" style="top:8%;animation-delay:.1s;">🌸</div>
-<div class="flower" style="top:14%;animation-delay:.2s;">🌺</div>
-<div class="flower" style="top:20%;animation-delay:.3s;">🌸</div>
-<div class="flower" style="top:26%;animation-delay:.4s;">🌺</div>
-<div class="flower" style="top:32%;animation-delay:.5s;">🌸</div>
-<div class="flower" style="top:38%;animation-delay:.6s;">🌸</div>
-<div class="flower" style="top:44%;animation-delay:.7s;">🌺</div>
-<div class="flower" style="top:50%;animation-delay:.8s;">🌸</div>
-<div class="flower" style="top:56%;animation-delay:.9s;">🌸</div>
-<div class="flower" style="top:62%;animation-delay:1s;">🌺</div>
-<div class="flower" style="top:68%;animation-delay:1.1s;">🌸</div>
-<div class="flower" style="top:74%;animation-delay:1.2s;">🌸</div>
-<div class="flower" style="top:80%;animation-delay:1.3s;">🌺</div>
-<div class="flower" style="top:86%;animation-delay:1.4s;">🌸</div>
-<div class="flower" style="top:92%;animation-delay:1.5s;">🌸</div>
+<div class="wind"></div>
+
+<div class="wind2"></div>
+
+<div class="petal" style="top:2%;animation-delay:.0s;">🌸</div>
+<div class="petal" style="top:6%;animation-delay:.1s;">🌸</div>
+<div class="petal" style="top:10%;animation-delay:.2s;">🌺</div>
+<div class="petal" style="top:14%;animation-delay:.3s;">🌸</div>
+<div class="petal" style="top:18%;animation-delay:.4s;">🌸</div>
+<div class="petal" style="top:22%;animation-delay:.5s;">🌺</div>
+<div class="petal" style="top:26%;animation-delay:.6s;">🌸</div>
+<div class="petal" style="top:30%;animation-delay:.7s;">🌸</div>
+<div class="petal" style="top:34%;animation-delay:.8s;">🌺</div>
+<div class="petal" style="top:38%;animation-delay:.9s;">🌸</div>
+<div class="petal" style="top:42%;animation-delay:1s;">🌸</div>
+<div class="petal" style="top:46%;animation-delay:1.1s;">🌺</div>
+<div class="petal" style="top:50%;animation-delay:1.2s;">🌸</div>
+<div class="petal" style="top:54%;animation-delay:1.3s;">🌸</div>
+<div class="petal" style="top:58%;animation-delay:1.4s;">🌺</div>
+<div class="petal" style="top:62%;animation-delay:1.5s;">🌸</div>
+<div class="petal" style="top:66%;animation-delay:1.6s;">🌸</div>
+<div class="petal" style="top:70%;animation-delay:1.7s;">🌺</div>
+<div class="petal" style="top:74%;animation-delay:1.8s;">🌸</div>
+<div class="petal" style="top:78%;animation-delay:1.9s;">🌸</div>
+<div class="petal" style="top:82%;animation-delay:2s;">🌺</div>
+<div class="petal" style="top:86%;animation-delay:2.1s;">🌸</div>
+<div class="petal" style="top:90%;animation-delay:2.2s;">🌸</div>
+<div class="petal" style="top:94%;animation-delay:2.3s;">🌺</div>
 
 <script>
 
-document.querySelectorAll(".flower").forEach(function(f){
+// توزيع البتلات بشكل عشوائي
 
-f.style.left=(-150-Math.random()*300)+"px";
+document.querySelectorAll(".petal").forEach(function(p){
 
-f.style.fontSize=(18+Math.random()*20)+"px";
+p.style.left=(-150-Math.random()*500)+"px";
+
+p.style.fontSize=(18+Math.random()*22)+"px";
 
 });
 
+
+// إضافة بتلات جديدة أثناء مرور الرياح
+
+let counter=0;
+
+const interval=setInterval(function(){
+
+const p=document.createElement("div");
+
+p.className="petal";
+
+p.innerHTML=Math.random()>0.5?"🌸":"🌺";
+
+p.style.top=(Math.random()*100)+"vh";
+
+p.style.left="-200px";
+
+p.style.fontSize=(18+Math.random()*20)+"px";
+
+p.style.animationDuration=(3+Math.random()*2)+"s";
+
+document.body.appendChild(p);
+
+counter++;
+
+if(counter>60){
+
+clearInterval(interval);
+
+}
+
+},50);
+
+
+// الانتقال بعد انتهاء الأنيميشن
+
 setTimeout(function(){
 
-    window.location.href = "contact.html";
+window.location.href="contact.html";
 
-},3500);
+},4000);
 
 </script>
 
 </body>
+
 </html>
