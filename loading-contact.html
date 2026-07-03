@@ -3,36 +3,130 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Loading Contact</title>
+<title>Loading...</title>
+
 <style>
-html,body{margin:0;height:100%;overflow:hidden;background:#fff7fb}
-#overlay{position:fixed;inset:0;background:linear-gradient(90deg,#ffd8ea 0%,#ff9fc9 40%,#ffd8ea 80%);transform:translateX(-120%);animation:wind 2.6s ease-in-out forwards;}
-.petal{position:fixed;left:-60px;font-size:24px;animation:petal 2.6s linear forwards}
+html,body{
+margin:0;
+padding:0;
+overflow:hidden;
+background:white;
+}
+
+.wave{
+position:fixed;
+left:-120%;
+top:0;
+width:120%;
+height:100%;
+background:#ff7eb6;
+clip-path:polygon(
+0% 0%,
+8% 3%,
+15% 0%,
+22% 5%,
+30% 1%,
+38% 7%,
+46% 2%,
+54% 8%,
+62% 3%,
+70% 9%,
+78% 4%,
+86% 10%,
+94% 5%,
+100% 0%,
+100% 100%,
+94% 95%,
+86% 100%,
+78% 94%,
+70% 99%,
+62% 92%,
+54% 97%,
+46% 90%,
+38% 96%,
+30% 91%,
+22% 97%,
+15% 92%,
+8% 98%,
+0% 100%
+);
+
+animation:wind 2.8s linear forwards;
+}
+
+.flower{
+position:absolute;
+font-size:24px;
+animation:fly 2.8s linear forwards;
+}
+
 @keyframes wind{
-0%{transform:translateX(-120%)}
-15%{transform:translateX(-70%)}
-100%{transform:translateX(120%)}
+
+0%{
+left:-120%;
 }
-@keyframes petal{
-0%{transform:translate(-80px,0) rotate(0);opacity:0}
-15%{opacity:1}
-100%{transform:translate(calc(100vw + 120px),40px) rotate(720deg);opacity:0}
+
+100%{
+left:100%;
 }
+
+}
+
+@keyframes fly{
+
+0%{
+transform:translateX(-100px) rotate(0deg);
+opacity:0;
+}
+
+15%{
+opacity:1;
+}
+
+100%{
+transform:translateX(120vw) rotate(720deg);
+opacity:0;
+}
+
+}
+
 </style>
+
 </head>
+
 <body>
-<div id="overlay"></div>
+
+<div class="wave"></div>
+
 <script>
-for(let i=0;i<45;i++){
- const p=document.createElement('div');
- p.className='petal';
- p.textContent='🌸';
- p.style.top=(Math.random()*100)+'vh';
- p.style.animationDelay=(Math.random()*0.8)+'s';
- p.style.fontSize=(18+Math.random()*20)+'px';
- document.body.appendChild(p);
+
+for(let i=0;i<60;i++){
+
+let f=document.createElement("div");
+
+f.className="flower";
+
+f.innerHTML="🌸";
+
+f.style.top=Math.random()*100+"vh";
+
+f.style.left=(-80-Math.random()*300)+"px";
+
+f.style.animationDelay=(Math.random()*0.8)+"s";
+
+f.style.fontSize=(18+Math.random()*22)+"px";
+
+document.body.appendChild(f);
+
 }
-setTimeout(()=>location.href='contact.html',2600);
+
+setTimeout(function(){
+
+window.location="contact.html";
+
+},2800);
+
 </script>
+
 </body>
 </html>
