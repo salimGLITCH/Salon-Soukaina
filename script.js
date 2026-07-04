@@ -385,3 +385,41 @@ window.scrollTo(0,0);
 };
 
 console.log("🌸 Salon Soukaina Loaded Successfully 🌸");
+
+const form = document.getElementById("reservationForm");
+
+if (form) {
+
+    form.addEventListener("submit", async function (e) {
+
+        e.preventDefault();
+
+        const data = new FormData(form);
+
+        const response = await fetch(form.action, {
+            method: "POST",
+            body: data,
+            headers: {
+                "Accept": "application/json"
+            }
+        });
+
+        if (response.ok) {
+
+            document.getElementById("successMessage").style.display = "block";
+
+            form.reset();
+
+            setTimeout(() => {
+                window.location.href = "index.html";
+            }, 3000);
+
+        } else {
+
+            alert("❌ An error occurred. Please try again.");
+
+        }
+
+    });
+
+}
