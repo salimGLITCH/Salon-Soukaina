@@ -422,4 +422,35 @@ if (form) {
 
     });
 
+    document.getElementById("reservationForm").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+let name = document.getElementById("name").value;
+let phone = document.getElementById("phone").value;
+let date = document.getElementById("date").value;
+let time = document.getElementById("time").value;
+let message = document.getElementById("message").value;
+
+let text =
+`🌸 Salon Soukaina Reservation
+
+👤 Name: ${name}
+
+📞 Phone: ${phone}
+
+📅 Date: ${date}
+
+🕒 Time: ${time}
+
+💬 Message: ${message}`;
+
+window.open(
+`https://wa.me/212632374991?text=${encodeURIComponent(text)}`,
+"_blank"
+);
+
+});
+
 }
+
